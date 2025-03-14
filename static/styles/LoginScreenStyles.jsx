@@ -1,0 +1,126 @@
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  loginContainer: {
+    flex: 1,
+    width: "100%",
+    flexDirection: "column",
+    overflow: "hidden",
+    fontFamily: "Nunito, sans-serif",
+    color: "rgba(255, 255, 255, 1)",
+    textAlign: "center",
+  },
+  backgroundImage: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loginButton: {
+    backgroundColor: "#00A49B",
+    borderRadius: 40,
+    paddingVertical: 16,
+    paddingHorizontal: 67,
+    marginTop: 10,
+    marginBottom: 25,
+    marginHorizontal: 21,
+  },
+  startButton: {
+    backgroundColor: "#00A49B",
+    borderRadius: 40,
+    paddingVertical: 16,
+    paddingHorizontal: 67,
+    marginTop: 750,
+    marginBottom: 25,
+    marginHorizontal: 21,
+  },
+  loginButtonText: {
+    color: "#fff",
+    fontSize: 20,
+    fontWeight: "900",
+    letterSpacing: 2,
+    textAlign: "center",
+  },
+  signupPrompt: {
+    marginTop: 41,
+    alignContent: "center",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  signupText: {
+    fontSize: 15,
+    fontWeight: "400",
+    letterSpacing: 1.5,
+    color: "#FFFFFF",
+  },
+  signupLinkContainer: {
+    padding: 0,
+    margin: 0,
+    height: 15,
+  },
+  signupLink: {
+    fontSize: 15,
+    fontWeight: "450",
+    letterSpacing: 1.5,
+    color: "#00A49B",
+    textdecoration: "underlined",
+    height: 20,
+  },
+  formContainer: {
+    width: "100%",
+    maxWidth: 400,
+    padding: 30,
+    borderRadius: 37,
+    backgroundColor: "rgb(255, 255, 255)",
+    alignItems: "center",
+    marginTop: 40,
+  },
+  backButton: {
+    alignSelf: "flex-start",
+    marginBottom: 10,
+  },
+  backButtonText: {
+    color: "#00A49B",
+    fontSize: 15,
+  },
+  heading: {
+    fontSize: 24,
+    fontWeight: "700",
+    color: "#00A49B",
+    marginBottom: 45,
+    marginTop: 30,
+  },
+  forgotPassword: {
+    color: "#00A49B",
+    fontSize: 15,
+    marginVertical: 30,
+  },
+  loaderContainer: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.8)", 
+  },
+  loaderText: {
+    marginTop: 10,
+    fontSize: 16,
+    color: "#00A49B",
+  },
+  overlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.8)", // Fondo semitransparente
+  },
+});
+
+export default styles;
