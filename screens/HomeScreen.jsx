@@ -8,7 +8,6 @@ import { collection, query, where, getDocs } from 'firebase/firestore';
 const HomeScreen = ({ navigation }) => {
   const [babies, setBabies] = useState([]); // Estado para almacenar los bebés
   const [loading, setLoading] = useState(true); // Estado para manejar la carga
-
   // Función para obtener los bebés del usuario
   const fetchBabies = async () => {
     const user = auth.currentUser;
@@ -42,6 +41,8 @@ const HomeScreen = ({ navigation }) => {
     }
   };
 
+  // Verificar si es necesario llamar a la función dos veces
+  fetchBabies();
   // Cargar los bebés cuando la pantalla se monte
   useEffect(() => {
     fetchBabies();
@@ -49,11 +50,15 @@ const HomeScreen = ({ navigation }) => {
 
   // Renderizar cada card de bebé
   const renderPatient = ({ item }) => (
-    <TouchableOpacity style={styles.patientCard}>
+    <TouchableOpacity 
+      style={styles.patientCard} 
+      onPress={() => navigation.navigate('BabyInfo', { baby: item })}
+    >
       <Image source={require('../static/images/bebe.png')} style={styles.patientImage} />
       <Text style={styles.patientName}>{item.nombre}</Text>
     </TouchableOpacity>
   );
+    
 
   return (
     <View style={styles.container}>
@@ -120,14 +125,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     alignItems: 'center',
     justifyContent: 'center',
-    margin: 10,
+    margin: 25,
     width: 120,
     height: 120,
     elevation: 4,
     shadowColor: '#000',
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.9,
     shadowOffset: { width: 2, height: 2 },
-    shadowRadius: 4,
+    shadowRadius: 10,
   },
   patientImage: {
     width: 50,

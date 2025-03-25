@@ -12,16 +12,17 @@ const DashboardCard = ({ title, value }) => {
 
 const styles = StyleSheet.create({
   card: {
+    marginHorizontal: 8,
     backgroundColor: '#FFFFFF',
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: 'rgb(197,197,197)', // gris para bordes secundarios
+    borderColor: 'rgb(197,197,197)',
     padding: 16,
     marginBottom: 16,
-    width: '48%', // dos tarjetas por fila
+    width: '40%', // dos tarjetas por fila
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
+    shadowOffset: { width: 5, height: 5 },
+    shadowOpacity: 0.5,
     shadowRadius: 2,
     elevation: 2,
   },

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 const RiskCard = ({ riskLevel, recommendation }) => {
   // riskLevel es un valor entre 0 y 1
-  const riskPercentage = Math.round(riskLevel * 100);
+  const riskPercentage = Math.round(riskLevel);
   
   return (
     <View style={styles.card}>
