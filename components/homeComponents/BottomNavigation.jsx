@@ -8,12 +8,6 @@ const BottomNavigation = () => {
         <Text style={styles.navText}>Inicio</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem}>
-        <Text style={styles.navText}>Historial</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.navItem}>
-        <Text style={styles.navText}>Alertas</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.navItem}>
         <Text style={styles.navText}>Perfil</Text>
       </TouchableOpacity>
     </View>

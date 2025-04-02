@@ -1,21 +1,18 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-const screenWidth = Dimensions.get("window").width;
-
-const rem = 32; // 1 rem = 16 pixels
-const distanceFromTop = 3 * rem; // 3 rem in pixels
+const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   headerContainer: {
     position: "absolute",
-    top: distanceFromTop,
+    top: height * 0.05, // 5% de la altura de la pantalla
     alignItems: "center",
-    width: screenWidth,
+    width: "100%", // Ocupa todo el ancho de la pantalla
   },
   logoImage: {
-    width: 140,
-    maxWidth: "100%",
-    aspectRatio: "1.21",
+    width: width * 0.35, // 35% del ancho de la pantalla
+    aspectRatio: 1.21, // Mantiene la proporción de la imagen
+    maxWidth: 140, // Límite máximo de ancho
   },
 });
 

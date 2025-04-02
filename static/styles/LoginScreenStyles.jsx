@@ -1,4 +1,6 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   loginContainer: {
@@ -9,6 +11,7 @@ const styles = StyleSheet.create({
     fontFamily: "Nunito, sans-serif",
     color: "rgba(255, 255, 255, 1)",
     textAlign: "center",
+    
   },
   backgroundImage: {
     flex: 1,
@@ -20,36 +23,36 @@ const styles = StyleSheet.create({
   loginButton: {
     backgroundColor: "#00A49B",
     borderRadius: 40,
-    paddingVertical: 16,
-    paddingHorizontal: 67,
-    marginTop: 10,
-    marginBottom: 25,
-    marginHorizontal: 21,
+    paddingVertical: height * 0.02, // 2% de la altura de la pantalla
+    paddingHorizontal: width * 0.1, // 20% del ancho de la pantalla
+    marginTop: height * 0.04,
+    marginBottom: height * 0.04,
+    marginHorizontal: width * 0.001,
   },
   startButton: {
     backgroundColor: "#00A49B",
     borderRadius: 40,
-    paddingVertical: 16,
-    paddingHorizontal: 67,
-    marginTop: 750,
-    marginBottom: 25,
-    marginHorizontal: 21,
+    paddingVertical: height * 0.02,
+    paddingHorizontal: width * 0.2,
+    marginTop: height * 0.8, // Ajustado dinámicamente
+    marginBottom: height * 0.002,
+    marginHorizontal: width * 0.05,
   },
   loginButtonText: {
     color: "#fff",
-    fontSize: 20,
+    fontSize: width * 0.047, // 5% del ancho de la pantalla
     fontWeight: "900",
     letterSpacing: 2,
     textAlign: "center",
   },
   signupPrompt: {
-    marginTop: 41,
+    marginTop: height * 0.05,
     alignContent: "center",
     justifyContent: "center",
     alignItems: "center",
   },
   signupText: {
-    fontSize: 15,
+    fontSize: width * 0.035,
     fontWeight: "400",
     letterSpacing: 1.5,
     color: "#FFFFFF",
@@ -60,21 +63,22 @@ const styles = StyleSheet.create({
     height: 15,
   },
   signupLink: {
-    fontSize: 15,
+    fontSize: width * 0.035,
     fontWeight: "450",
     letterSpacing: 1.5,
     color: "#00A49B",
-    textdecoration: "underlined",
-    height: 20,
+    textDecorationLine: "underline", // Corregido
+    height: height * 0.03,
   },
   formContainer: {
-    width: "100%",
-    maxWidth: 400,
-    padding: 30,
+    width: "100%", // Ajustado dinámicamente
+    minWidth: 310,
+    padding: width * 0.08,
     borderRadius: 37,
     backgroundColor: "rgb(255, 255, 255)",
     alignItems: "center",
-    marginTop: 40,
+    marginTop: height * 0.05,
+    marginBottom: height * 0.05,
   },
   backButton: {
     alignSelf: "flex-start",
@@ -85,16 +89,16 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   heading: {
-    fontSize: 24,
+    fontSize: width * 0.06,
     fontWeight: "700",
     color: "#00A49B",
-    marginBottom: 45,
-    marginTop: 30,
+    marginBottom: height * 0.05,
+    marginTop: height * 0.03,
   },
   forgotPassword: {
     color: "#00A49B",
-    fontSize: 15,
-    marginVertical: 30,
+    fontSize: width * 0.04,
+    marginVertical: height * 0.03,
   },
   loaderContainer: {
     position: "absolute",
@@ -107,8 +111,8 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 0.8)", 
   },
   loaderText: {
-    marginTop: 10,
-    fontSize: 16,
+    marginTop: height * 0.01,
+    fontSize: width * 0.04,
     color: "#00A49B",
   },
   overlay: {
@@ -119,7 +123,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(255, 255, 255, 0.8)", // Fondo semitransparente
+    backgroundColor: "rgba(255, 255, 255, 0.8)",
   },
 });
 

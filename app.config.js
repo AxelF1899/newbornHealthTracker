@@ -28,6 +28,7 @@ export default {
       supportsTablet: true
     },
     android: {
+      icon: "./assets/Logo_NBHT.png",
       package: "com.uaeh.NewBornHealthTracker",
       googleServicesFile: "./google-services.json",
       adaptiveIcon: {
